@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (username == "admin" && password == "password") {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => home_screen()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -77,7 +77,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RegistrationScreen()),
+                    MaterialPageRoute(
+                        builder: (context) => RegistrationScreen()),
                   );
                 },
                 child: Text('Don\'t have an account? Sign Up'),
